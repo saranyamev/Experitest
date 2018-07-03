@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]" parallel="tests">
+  <test thread-count="5" name="2nd test(failed)" parallel="tests">
+    <classes>
+      <class name="Seetest.SampleiOSTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="testUntitled"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Seetest.SampleiOSTest -->
+    </classes>
+  </test> <!-- 2nd test(failed) -->
+  <test thread-count="5" name="1st test(failed)" parallel="tests">
+    <classes>
+      <class name="Seetest.SampleAndroidTest">
+        <methods>
+          <include name="init"/>
+          <include name="test2"/>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- Seetest.SampleAndroidTest -->
+    </classes>
+  </test> <!-- 1st test(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
