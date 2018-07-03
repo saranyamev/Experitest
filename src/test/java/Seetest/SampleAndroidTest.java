@@ -15,7 +15,7 @@ import java.util.logging.Level;
 public class SampleAndroidTest {
     private String reportDirectory = "reports";
     private String reportFormat = "xml";
-    private String testName = "Untitled";
+    private String testName = "Android Test1";
     private String accessKey = "eyJ4cC51IjoxNDUxNDUsInhwLnAiOjE0NTE0NCwieHAubSI6Ik1UVXpNRFl4TXpZd01ESTJOQSIsImFsZyI6IkhTMjU2In0.eyJleHAiOjE4NDU5NzM2MDAsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.KTQcweVJFYfTyQpITDV9kLv2-oQ7COnK5NB0Y9LK1Rs";
     protected AndroidDriver<AndroidElement> driver = null;
 
