@@ -37,6 +37,7 @@ public class SampleAndroidTest {
 
     @Test
     public void testUntitled() {
+    	//Sample test
         driver.findElement(By.xpath("//*[@hint='Username']")).sendKeys("company");
         driver.findElement(By.xpath("//*[@hint='Password']")).sendKeys("company");
         driver.findElement(By.xpath("//*[@text='Login']")).click();
