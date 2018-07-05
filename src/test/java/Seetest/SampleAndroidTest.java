@@ -1,5 +1,4 @@
 package Seetest;
-//package <set your test package>;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -15,7 +14,7 @@ import java.util.logging.Level;
 public class SampleAndroidTest {
     private String reportDirectory = "reports";
     private String reportFormat = "xml";
-    private String testName = "Android Test1";
+    private String testName = "Sample Android Test";
     private String accessKey = "eyJ4cC51IjoxNDUxNDUsInhwLnAiOjE0NTE0NCwieHAubSI6Ik1UVXpNRFl4TXpZd01ESTJOQSIsImFsZyI6IkhTMjU2In0.eyJleHAiOjE4NDU5NzM2MDAsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.KTQcweVJFYfTyQpITDV9kLv2-oQ7COnK5NB0Y9LK1Rs";
     protected AndroidDriver<AndroidElement> driver = null;
 
@@ -27,9 +26,9 @@ public class SampleAndroidTest {
         dc.setCapability("reportFormat", reportFormat);
         dc.setCapability("testName", testName);
         dc.setCapability("accessKey", accessKey);
-        dc.setCapability(MobileCapabilityType.UDID, "0117114300883901");
-        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
-        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
+        dc.setCapability("deviceQuery", "@os='android'");
+        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.example.circleci.circlecidemo2");
+        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
         dc.setCapability("instrumentApp", true);
         driver = new AndroidDriver<>(new URL("https://demo.experitest.com:443/wd/hub"), dc);
         driver.setLogLevel(Level.INFO);
@@ -37,11 +36,9 @@ public class SampleAndroidTest {
 
     @Test
     public void testUntitled() {
-    	//Sample test
-        driver.findElement(By.xpath("//*[@hint='Username']")).sendKeys("company");
-        driver.findElement(By.xpath("//*[@hint='Password']")).sendKeys("company");
-        driver.findElement(By.xpath("//*[@text='Login']")).click();
-        driver.findElement(By.xpath("//*[@text='Logout']")).click();
+        driver.findElement(By.xpath("//*[@id='icon' and ./parent::*[@id='navigation_dashboard']]")).click();
+        driver.findElement(By.xpath("//*[@id='icon' and ./parent::*[@id='navigation_notifications']]")).click();
+        driver.findElement(By.xpath("//*[@id='icon' and ./parent::*[@id='navigation_home']]")).click();
         driver.pressKeyCode(AndroidKeyCode.HOME);
     }
 
