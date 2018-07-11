@@ -45,7 +45,7 @@ public class cloudapi{
     public void testPostNewApplication() throws IOException {
           
         String postURL = prepareURL();
-        uploadFile("/Users/Saranya/Dow																									", postURL);//TODO: filePath in local PC
+        uploadFile("/Users/Saranya/Dow", postURL);//TODO: filePath in local PC
             
     }
     private String prepareURL() {
