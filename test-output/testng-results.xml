@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48000" started-at="2018-07-03T12:00:35Z" finished-at="2018-07-03T12:01:23Z">
+  <suite name="Suite1" duration-ms="43220" started-at="2018-07-05T05:42:15Z" finished-at="2018-07-05T05:42:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="48000" started-at="2018-07-03T12:00:35Z" finished-at="2018-07-03T12:01:23Z">
+    <test name="1st test" duration-ms="41805" started-at="2018-07-05T05:42:15Z" finished-at="2018-07-05T05:42:57Z">
       <class name="Seetest.SampleAndroidTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Seetest.SampleAndroidTest@44a3ec6b]" name="setUp" is-config="true" duration-ms="25966" started-at="2018-07-03T12:00:35Z" finished-at="2018-07-03T12:01:01Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Seetest.SampleAndroidTest@44a3ec6b]" name="setUp" is-config="true" duration-ms="24526" started-at="2018-07-05T05:42:15Z" finished-at="2018-07-05T05:42:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:Seetest.SampleAndroidTest@44a3ec6b]" name="testUntitled" duration-ms="18163" started-at="2018-07-03T12:01:01Z" finished-at="2018-07-03T12:01:19Z">
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:Seetest.SampleAndroidTest@44a3ec6b]" name="testUntitled" duration-ms="13819" started-at="2018-07-05T05:42:39Z" finished-at="2018-07-05T05:42:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUntitled -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Seetest.SampleAndroidTest@44a3ec6b]" name="tearDown" is-config="true" duration-ms="3850" started-at="2018-07-03T12:01:19Z" finished-at="2018-07-03T12:01:23Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Seetest.SampleAndroidTest@44a3ec6b]" name="tearDown" is-config="true" duration-ms="3440" started-at="2018-07-05T05:42:53Z" finished-at="2018-07-05T05:42:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Seetest.SampleAndroidTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- 1st test -->
+    <test name="2nd test" duration-ms="43220" started-at="2018-07-05T05:42:15Z" finished-at="2018-07-05T05:42:58Z">
+      <class name="Seetest.SampleAndroidTest2">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Seetest.SampleAndroidTest2@7f416310]" name="setUp" is-config="true" duration-ms="26293" started-at="2018-07-05T05:42:15Z" finished-at="2018-07-05T05:42:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:Seetest.SampleAndroidTest2@7f416310]" name="testUntitled" duration-ms="13421" started-at="2018-07-05T05:42:41Z" finished-at="2018-07-05T05:42:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Seetest.SampleAndroidTest2@7f416310]" name="tearDown" is-config="true" duration-ms="3487" started-at="2018-07-05T05:42:55Z" finished-at="2018-07-05T05:42:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Seetest.SampleAndroidTest2 -->
+    </test> <!-- 2nd test -->
+  </suite> <!-- Suite1 -->
 </testng-results>
