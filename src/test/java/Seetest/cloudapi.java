@@ -19,9 +19,8 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.*;
 public class cloudapi{
       
     private static final String APPLICATIONS_URL = "/applications";
@@ -31,7 +30,7 @@ public class cloudapi{
     private String webPage= "https://" + host + ":" + port + "/api/v1";
     private String authStringEnc;
     
-    @Before
+    @BeforeMethod
     public void setup() {
         String name = "saranya@mev.ae";//TODO: admin user name is here
         String password = "Wildfire0";//TODO: admin password is here
@@ -45,7 +44,7 @@ public class cloudapi{
     public void testPostNewApplication() throws IOException {
           
         String postURL = prepareURL();
-        uploadFile("/Users/Saranya/Dow", postURL);//TODO: filePath in local PC
+        uploadFile("/Users/Saranya/Downloads/app-debug-6.apk", postURL);//TODO: filePath in local PC
             
     }
     private String prepareURL() {
@@ -94,7 +93,7 @@ public class cloudapi{
         System.out.println(finalString);
          
         System.out.println(String.format("Got response buffer: %s", responseBuffer.toString()));
-        Assert.assertTrue("Did not get Success Status", responseBuffer.toString().contains("\"status\":\"SUCCESS\""));
+        AssertJUnit.assertTrue("Did not get Success Status", responseBuffer.toString().contains("\"status\":\"SUCCESS\""));
         return finalString;
     }
     protected void printPost(URL url, HttpURLConnection httpURLConnection, String query) throws IOException {
@@ -148,7 +147,7 @@ public class cloudapi{
         //print result
         System.out.println(responseBuffer.toString());
         boolean isResponseValid = httpURLConnection.getResponseCode() < 300;
-        Assert.assertTrue("Did not get valid response", isResponseValid);
+        AssertJUnit.assertTrue("Did not get valid response", isResponseValid);
         return responseBuffer.toString();
             
     }
