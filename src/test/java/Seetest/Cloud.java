@@ -11,7 +11,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
-import java.util.Base64;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -41,7 +40,7 @@ public class Cloud{
     public void testPostNewApplication() throws IOException {
 
         String postURL = prepareURL();
-        uploadFile(System.getenv("apkPath"), postURL);
+        uploadFile(System.getenv("/home/circleci/project/outputs/outputs/apk/debug/app-debug.apk"), postURL);
 
     }
     private String prepareURL() {
@@ -144,7 +143,7 @@ public class Cloud{
         //print result
         System.out.println(responseBuffer.toString());
         boolean isResponseValid = httpURLConnection.getResponseCode() < 300;
-        AssertJUnit.assertTrue("Did not get valid response", isResponseValid);
+        AssertJUnit.assertTrue ("Did not get valid response", isResponseValid);
         return responseBuffer.toString();
 
     }
