@@ -15,7 +15,7 @@ public class SampleAndroidTest {
     private String reportDirectory = "reports";
     private String reportFormat = "xml";
     private String testName = "Sample Android Test";
-    private String accessKey = "eyJ4cC51IjoxNDUxNDUsInhwLnAiOjE0NTE0NCwieHAubSI6Ik1UVXpNRFl4TXpZd01ESTJOQSIsImFsZyI6IkhTMjU2In0.eyJleHAiOjE4NDU5NzM2MDAsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.KTQcweVJFYfTyQpITDV9kLv2-oQ7COnK5NB0Y9LK1Rs";
+    private String accessKey = "eyJleHAiOjE4NDU5NzM2MDAsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.KTQcweVJFYfTyQpITDV9kLv2-oQ7COnK5NB0Y9LK1Rs";
     protected AndroidDriver<AndroidElement> driver = null;
 
     DesiredCapabilities dc = new DesiredCapabilities();

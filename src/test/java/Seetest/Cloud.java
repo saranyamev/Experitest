@@ -40,7 +40,7 @@ public class Cloud{
     public void testPostNewApplication() throws IOException {
 
         String postURL = prepareURL();
-        uploadFile(System.getenv("/home/circleci/project/outputs/outputs/apk/debug/app-debug.apk"), postURL);
+        uploadFile(System.getenv("apkPath"), postURL);
 
     }
     private String prepareURL() {
